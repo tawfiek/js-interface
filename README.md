@@ -1,6 +1,6 @@
 # js-interface
 
-This package adding capability to Javascript to mimic an interface functionality like the in strongly typed languages.
+A light wight package adding capability to Javascript to mimic an interface functionality like the in strongly typed languages.
 
 ## Example
 
