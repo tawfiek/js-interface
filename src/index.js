@@ -16,7 +16,7 @@ export default class Interface {
         }
     }
 
-    static ensureImplements (object) {
+    static implements (object) {
         if(arguments.length < 2) {
             throw new Error("Function Interface.ensureImplements called with " +
             arguments.length + "arguments, but expected at least 2.");

@@ -4,7 +4,7 @@ const Move = new Interface('Move', ['moveForward', 'moveBackward']);
 const Turn = new Interface('Turn', ['turnRight', 'turnLeft']);
 class Car {
     constructor (model, type) {
-        Interface.ensureImplements (this, Move, Turn);
+        Interface.implements (this, Move, Turn);
 
         console.log(`MODEL: ${model}, TYPE: ${type}`);
     }

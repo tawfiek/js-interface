@@ -16,7 +16,7 @@ This package adding capability to Javascript to mimic an interface functionality
             // Here we manually ensure that 'this' instant of the class
             // Implements the Moe and Turn Interfaces since javascript
             // dose not have implements key words
-            Interface.ensureImplements (this, Move, Turn);
+            Interface.implements (this, Move, Turn);
 
             console.log(`MODEL: ${model}, TYPE: ${type}`);
         }
