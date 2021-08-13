@@ -21,19 +21,19 @@ export default class Interface {
             throw new Error("Function Interface.ensureImplements called with " +
             arguments.length + "arguments, but expected at least 2.");
         }
-    
-        for(let i = 1, len = arguments.length; i < len; i++) {
-            const interface = arguments[i];
 
-            if (interface.constructor !== Interface) {
+        for(let i = 1, len = arguments.length; i < len; i++) {
+            const interfaceToInherit = arguments[i];
+
+            if (interfaceToInherit.constructor !== Interface) {
                 throw new Error('Function Interface.ensureImplements expects arguments two and above to be instances of Interface.');
             }
-    
-            for(let j = 0, methodsLen = interface.methods.length; j < methodsLen; j++) {
-                const method = interface.methods[j];
+
+            for(let j = 0, methodsLen = interfaceToInherit.methods.length; j < methodsLen; j++) {
+                const method = interfaceToInherit.methods[j];
                 if(!object[method] || typeof object[method] !== 'function') {
                 throw new Error(`Function Interface.ensureImplements:
-                    object does not implement the ${interface.name} interface. Method ${method} was not found.`);
+                    object does not implement the ${interfaceToInherit.name} interface. Method ${method} was not found.`);
                 }
             }
         }

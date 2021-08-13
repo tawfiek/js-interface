@@ -5,17 +5,40 @@ This package adding capability to Javascript to mimic an interface functionality
 ## Example
 
 ``` javascript
-    // Can be used using first class function.
+    import Interface from "oop-interface";
 
-    // Define the interfaces and the method should be implements
-    const Move = new Interface('Move', ['moveForward', 'moveBack']);
-    const Turn = new Interface('Turn', ['turnRight', 'turnLeft' ]);
+    // Define the interfaces and the method should be implemented
+    const Move = new Interface('Move', ['moveForward', 'moveBackward']);
+    const Turn = new Interface('Turn', ['turnRight', 'turnLeft']);
 
+    class Car {
+        constructor (model, type) {
+            // Here we manually ensure that 'this' instant of the class
+            // Implements the Moe and Turn Interfaces since javascript
+            // dose not have implements key words
+            Interface.ensureImplements (this, Move, Turn);
 
-    const Car = function (model, type) {
-        Interface.insureImpalement(this, Move, Turn);
-        ...
+            console.log(`MODEL: ${model}, TYPE: ${type}`);
+        }
+
+        moveForward () {
+            console.log('FORWARD ..');
+        }
+
+        moveBackward () {
+            console.log('BACKWARD ..');
+        }
+
+        turnRight () {
+            console.log('RIGHT ..');
+        }
+
+        turnLeft () {
+            console.log('LEFT ..');
+        }
     }
 
-
+    // If the Car dose miss any functionality should be in the interfaces
+    // This code should throw an error.
+    const myNewCar = new Car ('2001', 'Sedan');
 ```
