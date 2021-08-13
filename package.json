@@ -1,0 +1,23 @@
+{
+  "name": "js-interface",
+  "version": "0.0.1",
+  "description": "Add interface for javascript ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawfiek/js-interface.git"
+  },
+  "keywords": [
+    "intrface",
+    "oop"
+  ],
+  "author": "Tawfiek <tawfiek.108@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tawfiek/js-interface/issues"
+  },
+  "homepage": "https://github.com/tawfiek/js-interface#readme"
+}
